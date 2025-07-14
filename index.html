@@ -21,7 +21,192 @@
     <form action="example.com/path" method="post">
 
     </form>
-    
+
     -->
+
+    <!-- Form Controls -->
+
+    <!--
+    
+
+    === The <input> element ===
+
+    1. The input element has the most options of all the form control elements
+    2. It accepts a type attribute which tells the browser what type of data it should expect
+
+    For example:
+
+    <form action="example.com/path" method="post">
+        <input type="text">
+    </form>
+
+    Text type inputs accept any text, could be used for collecting first and last names
+
+
+    === Labels ===
+
+    1. Labels are used to tell the user what kind of data they are supposed to provide
+    2. The text the label should show goes between opening and closing tags
+    3. Labels accept a for attribute to associate it to its input, the input and for attributes should have the same value
+    4. When a label is clicked the associated input will be highlighted so the user can enter some data, more for accessible users and assistive technologies*
+
+    Example:
+
+    <form action="example.com/path" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name">
+    </form>
+
+
+    === Placeholder attribute ===
+    
+    1. To guide users on what to enter in forms, placeholder text can be added to the input fields
+    2. placeholder attributes are added to the input element, the value will be the text that should be displayed
+    3. Placeholder text is useful for demonstrating how text should be entered and formatted
+
+    Example:
+
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" placeholder="Bob...">
+
+
+    === Name attribute ===
+
+    1. name attributes are used to tell the backend what each piece of data represents in the form
+    2. The name attribute is added to the input element and its value acts like a variable name for the inputted result
+    3. It is important as without it the data will not be sent when the from is submitted
+
+    Example:
+
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name">
+
+    first_name: "Max" for example would be the output if the user typed Max when submitting
+
+
+    === Type attribute ===
+
+    There are many different types of inputs for different data, examples include:
+
+    1. Email inputs
+
+        a. To get an email input, yo use the type attribute with value of "email"
+        b. Email inputs will display a different keyboard on mobile devices to easily access the @ symbol
+        c. The email input will also validate that the user has entered a correctly formatted email address
+
+        Example:
+
+        <label for="user_email">Email Address:</label>
+        <input type="email" id="user_email" name="email" placeholder="you@example.com">
+
+    2. Password inputs
+
+        a. Password inputs are specialised text inputs but the differ by masking the inputted data with an asterisk or bullet point
+        b. To get a password input you can assign the type attribute with a value of "password"
+        c. Made so other people cannot see what is being input
+
+        Example:
+
+        <label for="user_password">Password:</label>
+        <input type="password" id="user_password" name="password">
+
+    3. Number inputs
+
+        a. The number input only accepts number values and ignores any other character the user tries to enter
+        b. The number input can be defined with the type attribute of "number"
+
+        Example:
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount">
+
+    4. Date inputs
+
+        a. The date input renders a calendar that users can choose a date from
+        b. The date input is defined with the type attribute of "date"
+
+        Example:
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+    
+    === Text Area ===
+
+    1. Textareas are not input elements but provide an input box that can accept multiple lines of text
+    2. The textarea can be resized by clicking and dragging the bottom right corner to make it bigger or smaller
+    3. To create a text area, it is defined with the <textarea> tags, they have a closing tag
+    4. Textarea accepts some unique attributes, such as rows and cols that can take number values that control the initial size of the text area
+
+    Example:
+
+    <textarea rows="20" cols="60">Some initial content</textarea>
+
+    -->
+
+    <!-- Text input with label -->
+    <fieldset>
+      <legend>Text input with label</legend>
+      <form action="example.com/path" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" />
+      </form>
+    </fieldset>
+
+    <!-- Text input with placeholder -->
+    <fieldset>
+      <legend>Text input with placeholder</legend>
+      <form action="example.com/path" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" placeholder="Bob..." />
+      </form>
+    </fieldset>
+
+    <!-- Email input -->
+    <fieldset>
+      <legend>Email input</legend>
+      <form action="example.com/path" method="post">
+        <label for="user_email">Email Address:</label>
+        <input
+          type="email"
+          id="user_email"
+          name="email"
+          placeholder="you@example.com"
+        />
+      </form>
+    </fieldset>
+
+    <!-- Password input -->
+    <fieldset>
+      <legend>Password input</legend>
+      <form action="example.com/path" method="post">
+        <label for="user_password">Password:</label>
+        <input type="password" id="user_password" name="password" />
+      </form>
+    </fieldset>
+
+    <!-- Number input -->
+    <fieldset>
+      <legend>Number input</legend>
+      <form action="example.com/path" method="post">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" />
+      </form>
+    </fieldset>
+
+    <!-- Date input -->
+    <fieldset>
+      <legend>Date input</legend>
+      <form action="example.com/path" method="post">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" />
+      </form>
+    </fieldset>
+
+    <!-- Textarea element -->
+    <fieldset>
+      <legend>Textarea element</legend>
+      <textarea rows="10" cols="60">Some initial content</textarea>
+    </fieldset>
   </body>
 </html>
