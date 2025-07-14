@@ -208,5 +208,197 @@
       <legend>Textarea element</legend>
       <textarea rows="10" cols="60">Some initial content</textarea>
     </fieldset>
+
+    <!--
+    
+
+    === Selection Elements ===
+    
+    Selection elements are for when there is a predefined list of options that the user should pick from
+
+
+    === Select dropdown ===
+
+    1. The select element renders a dropdown list where users can select an option
+    2. The select element is similar to an unordered list, wrapping option elements to be selected
+    3. The option elements should have a value, and that value is sent to the server when the form is submitted
+    4. An option can be selected by default using the selected attribute
+
+    Example:
+
+    <select name="Car">
+        <option value="mercedes" selected>Mercedes</option>
+        <option value="tesla">Tesla</option>
+        <option value="volvo">Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="mini">Mini</option>
+        <option value="ford">Ford</option>
+    </select>
+
+    5. Options can also be split into groups using the <optgroup> element
+    6. Optgroups can take a label attribute thats value is shown in the option list to act as a heading
+
+    Example:
+
+    <select name="fashion">
+        <optgroup label="Clothing">
+            <option value="t_shirt">T-Shirts</option>
+            <option value="sweater">Sweaters</option>
+            <option value="coats">Coats</option>
+        </optgroup>
+        <optgroup label="Foot Wear">
+            <option value="sneakers">Sneakers</option>
+            <option value="boots">Boots</option>
+            <option value="sandals">Sandals</option>
+        </optgroup>
+    </select>
+
+
+    === Radio buttons ===
+
+    1. Radio buttons are used for smaller selections of options
+    2. Radio buttons are displayed on the screen and not hidden behind a dropdown like a select element
+    3. Radio buttons allow a user to select only one of in their group
+    4. Radio buttons are declared with the input element with a type attribute with value of "radio"
+    5. When one option is selected in a radio group, the other is deselected, as long as they have the same name attribute value
+    6. A default selected option can be added with the checked attribute
+
+    Example:
+
+    <h1>Ticket Type</h1>
+    <div>
+        <input type="radio" id="child" name="ticket_type" value="child">
+        <label for="child">Child</label>
+    </div>
+    <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+        <label for="adult">Adult</label>
+    </div>
+    <div>
+        <input type="radio" id="senior" name="ticket_type" value="senior">
+        <label for="senior">Senior</label>
+    </div>
+
+
+    === Checkboxes === 
+
+    1. Checkboxes are similar to radio buttons but they allow multiple options to be selected at once
+    2. To create a checkbox, you give an input element a type attribute with value of "checkbox"
+    3. Because any number of checkboxes can be selected or not selected you can have only one checkbox for things like signing up to newsletters or for remembering login details
+    4. Checkboxes can be checked by default using the checked attribute
+
+    Example:
+
+    <h1>Pizza Toppings</h1>
+    <div>
+        <input type="checkbox" id="sausage" name="topping" value="sausage" checked>
+        <label for="sausage">Sausage</label>
+    </div>
+    <div>
+        <input type="checkbox" id="onions" name="topping" value="onions">
+        <label for="onions">Onions</label>
+    </div>
+    <div>
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+    </div>
+    <div>
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+    </div>
+    
+    -->
+
+    <!-- Drop Down -->
+    <fieldset>
+      <legend>Simple Dropdown</legend>
+      <select name="Car">
+        <option value="mercedes" selected>Mercedes</option>
+        <option value="tesla">Tesla</option>
+        <option value="volvo">Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="mini">Mini</option>
+        <option value="ford">Ford</option>
+      </select>
+    </fieldset>
+
+    <!-- Drop Down with groups -->
+    <fieldset>
+      <legend>Dropdown with groups</legend>
+      <select name="fashion">
+        <optgroup label="Clothing">
+          <option value="t_shirt">T-Shirts</option>
+          <option value="sweater">Sweaters</option>
+          <option value="coats">Coats</option>
+        </optgroup>
+        <optgroup label="Foot Wear">
+          <option value="sneakers">Sneakers</option>
+          <option value="boots">Boots</option>
+          <option value="sandals">Sandals</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <!-- Radio buttons -->
+    <fieldset>
+      <legend>Radio buttons</legend>
+      <p>Ticket Type</p>
+      <div>
+        <input type="radio" id="child" name="ticket_type" value="child" />
+        <label for="child">Child</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="adult"
+          name="ticket_type"
+          value="adult"
+          checked
+        />
+        <label for="adult">Adult</label>
+      </div>
+      <div>
+        <input type="radio" id="senior" name="ticket_type" value="senior" />
+        <label for="senior">Senior</label>
+      </div>
+    </fieldset>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Checkboxes</legend>
+      <p>Pizza Toppings</p>
+      <div>
+        <input
+          type="checkbox"
+          id="sausage"
+          name="topping"
+          value="sausage"
+          checked
+        />
+        <label for="sausage">Sausage</label>
+      </div>
+      <div>
+        <input type="checkbox" id="onions" name="topping" value="onions" />
+        <label for="onions">Onions</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="pepperoni"
+          name="topping"
+          value="pepperoni"
+        />
+        <label for="pepperoni">Pepperoni</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="mushrooms"
+          name="topping"
+          value="mushrooms"
+        />
+        <label for="mushrooms">Mushrooms</label>
+      </div>
+    </fieldset>
   </body>
 </html>
