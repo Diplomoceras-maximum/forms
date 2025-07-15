@@ -451,5 +451,91 @@
       <legend>Button</legend>
       <button type="button">Button</button>
     </fieldset>
+
+    <!--
+    
+
+    === Organising form elements ===
+    
+    1. Larger forms can be overwhelming for users and they may be discouraged by them
+    2. There are some elements that make it easier to organise forms into sections, including:
+      
+    
+    === Fieldset Element ===
+
+    1. The fieldset element is a container element that groups related elements into one unit
+    2. To create a fieldset element you use the <fieldset> element, all elements to be grouped go inside the opening and closing tags
+
+    Example:
+
+    <fieldset>
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name">
+
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name">
+    </fieldset>
+
+
+    === Legend Element ===
+    
+    1. The legend element is used to give the fieldset a heading or caption so the user can see what a grouping of inputs is for
+    2. To create a legend, you use the <legend> element with the text to display between the opening and closing tags, the legend should come right after the opening fieldset tag
+    3. Fieldsets are commonly used to group radio and checkbox selections
+
+    Example:
+
+    <fieldset>
+      <legend>What would you like to drink?</legend>
+      <div>
+        <input type="radio" name="drink" id="coffee" value="coffee">
+        <label for="coffee">Coffee</label>
+      </div>
+      <div>
+        <input type="radio" name="drink" id="tea" value="tea">
+        <label for="tea">Tea</label>
+      </div>
+      <div>
+        <input type="radio" name="drink" id="soda" value="soda">
+        <label for="soda">Soda</label>
+      </div>
+    </fieldset>
+    
+    -->
+
+    <!-- Fieldset Element-->
+    <fieldset>
+      <legend>Fieldset Element</legend>
+      <fieldset>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" />
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" />
+      </fieldset>
+    </fieldset>
+
+    <!-- Legend Element -->
+    <fieldset>
+      <legend>Legend Element</legend>
+      <fieldset>
+        <legend>What would you like to drink?</legend>
+
+        <div>
+          <input type="radio" name="drink" id="coffee" value="coffee" />
+          <label for="coffee">Coffee</label>
+        </div>
+
+        <div>
+          <input type="radio" name="drink" id="tea" value="tea" />
+          <label for="tea">Tea</label>
+        </div>
+
+        <div>
+          <input type="radio" name="drink" id="soda" value="soda" />
+          <label for="soda">Soda</label>
+        </div>
+      </fieldset>
+    </fieldset>
   </body>
 </html>
